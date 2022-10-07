@@ -7,16 +7,22 @@ int main() {
 	
 	int menu;
 	elenco dati;
+
 	
 	creaFile();
 	
-	printf("Benvenuto nella rubrica. Cosa vuoi fare? \n\n");
+	printf("Benvenuto nella rubrica. \n\n");
 	
 	do {
-		printf("1) Caricamento\n");
-		printf("2) Ricerca\n");
-		printf("3) Visualizza rubrica\n");
-		printf("4) Esci\n");
+		printf("+------------------------+\n");
+		printf("|     Cosa vuoi fare?    |\n");
+		printf("+------------------------+\n");
+		printf("| 1) Caricamento         |\n");
+		printf("| 2) Ricerca             |\n");
+		printf("| 3) Visualizza rubrica  |\n");
+		printf("| 4) Esci                |\n");
+		printf("+------------------------+\n");
+		printf(">");
 		
 		scanf("%d", &menu);
 	
@@ -42,5 +48,3 @@ int main() {
 	
 	return 0;
 }
-
-

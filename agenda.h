@@ -13,12 +13,9 @@ typedef struct{
 } Anagrafica;
 typedef Anagrafica elenco[MAX_CONTATTI];
 
-int contatti_totali; 
-
 void creaFile();
 void caricamento(elenco dati);
 void ricerca(elenco dati);
 void stampa(elenco dati);
 
-#endif 
-
+#endif
