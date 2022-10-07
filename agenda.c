@@ -23,7 +23,8 @@ void creaFile()
 
 void caricamento(elenco dati)
 {
-	int contatti, i;
+	int contatti, i;	
+	int contatti_totali = 0;
 	
 	FILE *f;
 	
@@ -59,7 +60,7 @@ void caricamento(elenco dati)
 		fclose(f);
 	}
 	
-	contatti_totali = contatti_totali + contatti;
+	contatti_totali += contatti;
 }
 
 void ricerca(elenco dati)
@@ -86,7 +87,7 @@ void ricerca(elenco dati)
 			if (strcmp(nome, dati[i].nome) == 0) {
 			    fscanf(f, "%s", dati[i].cognome);
 			    fscanf(f, "%s", dati[i].cell);
-				printf("Nome: %s \nCognome: %s \nCellulare: %s \n\n\n", dati[i].nome, dati[i].cognome, dati[i].cell);
+				printf("\nNome.....: %s \nCognome..: %s \nCellulare: %s \n\n", dati[i].nome, dati[i].cognome, dati[i].cell);
 				
 				found = 1;
 			}
@@ -116,7 +117,7 @@ void stampa(elenco dati)
 	
 	else
 	{
-	    printf("**********LISTA CONTATTI**********\n\n");
+	    printf("******** LISTA CONTATTI *********\n\n");
 	    printf("NOME     COGNOME     CELLULARE\n");
 	    
 	    do {
@@ -136,4 +137,3 @@ void stampa(elenco dati)
 	}
     
 }
-
